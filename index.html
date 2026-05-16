@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Пельмени — идеальная инструкция с таймерами</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            padding: 24px;
+            color: #1f1f1f;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 36px;
+            padding: 32px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .subhead {
+            color: #666;
+            margin-bottom: 32px;
+            font-size: 16px;
+            border-left: 3px solid #e67e22;
+            padding-left: 16px;
+        }
+
+        .step-card {
+            background: #fef9f4;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid #ffe6d5;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #e67e22;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-desc {
+            margin-bottom: 16px;
+            line-height: 1.5;
+            color: #2d2d2d;
+        }
+
+        .note {
+            background: #fff6e0;
+            padding: 12px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            margin: 16px 0;
+            border-left: 3px solid #f1c40f;
+        }
+
+        .timer-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid #ffe0cc;
+        }
+
+        .timer-display {
+            font-size: 32px;
+            font-family: monospace;
+            font-weight: 600;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 40px;
+            letter-spacing: 2px;
+        }
+
+        button {
+            background: #e67e22;
+            color: white;
+            border: none;
+            font-size: 14px;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .btn-reset {
+            background: #ced4da;
+            color: #1f1f1f;
+        }
+
+        .global-timer {
+            background: #e67e22;
+            color: white;
+            border-radius: 28px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .global-timer .timer {
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            margin: 8px 0;
+        }
+
+        .footer {
+            margin-top: 32px;
+            font-size: 12px;
+            text-align: center;
+            color: #adb5bd;
+            border-top: 1px solid #e9ecef;
+            padding-top: 24px;
+        }
+        max-width: 550px {
+            .container { padding: 20px; }
+            .timer-display { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🥟 Идеальные пельмени</h1>
+    <div class="subhead">Пошаговая инструкция с таймерами. Почему так — объясняю. Никакой воды.</div>
+
+    <!-- ШАГ 1 -->
+    <div class="step-card">
+        <div class="step-title">📌 Шаг 1. Кипятим воду</div>
+        <div class="step-desc">
+            <strong>Почему это важно:</strong> Если воды мало, пельмени слипнутся. Если нет соли, тесто станет резиновым.
+
+            • Кастрюля <strong>от 3 литров</strong>
+• Воды — <strong>2/3 кастрюли</strong> (минимум 2 литра)
+
+            • Соль — <strong>1 ст. ложка БЕЗ горки</strong>
+
+            • Доведи до <strong>сильного кипения</strong>
+        </div>
+        <div class="timer-row">
+            <span class="timer-display" id="timerWater">4:00</span>
+            <button id="startWaterBtn">🔥 Старт (4 минуты на кипение)</button>
+            <button id="resetWaterBtn" class="btn-reset">Сброс</button>
+        </div>
+    </div>
+
+    <!-- ШАГ 2 -->
+    <div class="step-card">
+        <div class="step-title">📌 Шаг 2. Варим до всплытия</div>
+        <div class="step-desc">
+            <strong>Замороженные</strong> — не размораживай, кидай сразу.
+
+            <strong>Свежие</strong> — вари на 1 минуту меньше.
+
+            • Кидай <strong>по одному</strong>, чтобы вода не остыла.
+
+            • Аккуратно перемешай <strong>один раз</strong>
+
+            • Жди <strong>всплытия</strong> — это займёт 3–4 минуты.
+        </div>
+        <div class="note">💡 Если пельмени не всплыли через 4 минуты — огонь слабый. Увеличь.</div>
+        <div class="timer-row">
+            <span class="timer-display" id="timerFloat">3:30</span>
+            <button id="startFloatBtn">🍥 Старт (3:30 до всплытия)</button>
+            <button id="resetFloatBtn" class="btn-reset">Сброс</button>
+        </div>
+    </div>
+
+    <!-- ШАГ 3 -->
+    <div class="step-card">
+        <div class="step-title">📌 Шаг 3. Финишная варка</div>
+        <div class="step-desc">
+            Пельмени всплыли? <strong>Запускай таймер!</strong> Крышкой не накрывай — иначе развалятся.
+
+            • <strong>Замороженные:</strong> 5 минут
+
+            • <strong>Свежие:</strong> 4 минуты
+        </div>
+        <div class="timer-row">
+            <span class="timer-display" id="timerBoil">5:00</span>
+            <button id="startBoilBtn">⏱️ Старт варки (5 минут)</button>
+            <button id="resetBoilBtn" class="btn-reset">Сброс</button>
+        </div>
+    </div>
+
+    <!-- ШАГ 4 -->
+    <div class="step-card">
+        <div class="step-title">📌 Шаг 4. Достаём и подаём</div>
+        <div class="step-desc">
+            • Выключи огонь.
+
+            • Доставай <strong>шумовкой</strong>, дай воде стечь.
+
+            • Добавь <strong>сливочное масло</strong> (кусочек 20–30 г) — не слипнутся.
+        </div>
+        <div class="note">⭐ Если слиплись — перемешивал слишком много или мало масла.</div>
+    </div>
+
+    <!-- СУПЕР-ТАЙМЕР -->
+    <div class="global-timer">
+        <div>⚡ СУПЕР-ТАЙМЕР (кипячение → всплытие → варка)</div>
+        <div class="timer" id="fullTimer">12:30</div>
+        <button id="startFullBtn">🚀 Запустить полный цикл</button>
+        <button id="resetFullBtn" class="btn-reset" style="background:#d9534f;">Сбросить всё</button>
+    </div>
+
+    <div class="footer">
+        Рецепт проверен на сотнях порций. Просто следуй таймерам.
+    </div>
+</div>
+
+<script>
+    // === ТАЙМЕР 1: КИПЯЧЕНИЕ (4 минуты) ===
+    let waterSeconds = 240, waterInterval = null;
+    const waterDisplay = document.getElementById('timerWater');
+    function updateWater() { let m=Math.floor(waterSeconds/60), s=waterSeconds%60; waterDisplay.innerText=`${m}:${s.toString().padStart(2,'0')}`; }
+    function startWater() { if(waterInterval) clearInterval(waterInterval); waterInterval=setInterval(()=>{ if(waterSeconds<=1){ clearInterval(waterInterval); waterDisplay.innerText="✅ Вода закипела!"; } else { waterSeconds--; updateWater(); } },1000); }
+    function resetWater() { if(waterInterval) clearInterval(waterInterval); waterSeconds=240; updateWater(); }
+    document.getElementById('startWaterBtn').onclick=startWater;
+    document.getElementById('resetWaterBtn').onclick=resetWater;
+
+    // === ТАЙМЕР 2: ВСПЛЫТИЕ (3 минуты 30 секунд) ===
+    let floatSeconds = 210, floatInterval = null;
+    const floatDisplay = document.getElementById('timerFloat');
+    function updateFloat() { let m=Math.floor(floatSeconds/60), s=floatSeconds%60; floatDisplay.innerText=`${m}:${s.toString().padStart(2,'0')}`; }
+    function startFloat() { if(floatInterval) clearInterval(floatInterval); floatInterval=setInterval(()=>{ if(floatSeconds<=1){ clearInterval(floatInterval); floatDisplay.innerText="🥟 Пельмени всплыли!"; } else { floatSeconds--; updateFloat(); } },1000); }
+    function resetFloat() { if(floatInterval) clearInterval(floatInterval); floatSeconds=210; updateFloat(); }
+    document.getElementById('startFloatBtn').onclick=startFloat;
+    document.getElementById('resetFloatBtn').onclick=resetFloat;
+
+    // === ТАЙМЕР 3: ВАРКА (5 минут) ===
+    let boilSeconds = 300, boilInterval = null;
+    const boilDisplay = document.getElementById('timerBoil');
+    function updateBoil() { let m=Math.floor(boilSeconds/60), s=boilSeconds%60; boilDisplay.innerText=`${m}:${s.toString().padStart(2,'0')}`; }
+    function startBoil() { if(boilInterval) clearInterval(boilInterval); boilInterval=setInterval(()=>{ if(boilSeconds<=1){ clearInterval(boilInterval); boilDisplay.innerText="🎉 Пельмени готовы!"; } else { boilSeconds--; updateBoil(); } },1000); }
+    function resetBoil() { if(boilInterval) clearInterval(boilInterval); boilSeconds=300; updateBoil(); }
+    document.getElementById('startBoilBtn').onclick=startBoil;
+    document.getElementById('resetBoilBtn').onclick=resetBoil;
+
+    // === СУПЕР-ТАЙМЕР (ПОЛНЫЙ ЦИКЛ) ===
+    let fullSeconds = 750, fullInterval = null; // 4:00 + 3:30 + 5:00 = 12:30
+    const fullDisplay = document.getElementById('fullTimer');
+    function updateFull() { let m=Math.floor(fullSeconds/60), s=fullSeconds%60; fullDisplay.innerText=`${m}:${s.toString().padStart(2,'0')}`; }
+    function startFull() {
+        if(fullInterval) clearInterval(fullInterval);
+        fullSeconds = 750;
+        updateFull();
+        fullInterval = setInterval(() => {
+            if(fullSeconds <= 1) {
+                clearInterval(fullInterval);
+                fullDisplay.innerText = "🎉 ГОТОВО! 🎉";
+            } else {
+                fullSeconds--;
+                updateFull();
+            }
+        }, 1000);
+    }
+    function resetFull() {
+        if(fullInterval) clearInterval(fullInterval);
+        fullSeconds = 750; updateFull();
+        resetWater(); resetFloat(); resetBoil();
+    }
+    document.getElementById('startFullBtn').onclick = startFull;
+    document.getElementById('resetFullBtn').onclick = resetFull;
+
+    // начальное отображение
+    updateWater(); updateFloat(); updateBoil(); updateFull();
+</script>
+</body>
+</html>
