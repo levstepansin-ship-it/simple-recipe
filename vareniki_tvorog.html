@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Пельмени — идеальная инструкция с таймерами</title>
+    <title>Вареники с творогом — простая инструкция с таймерами</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='80'%3E🥟%3C/text%3E%3C/svg%3E">
     <style>
         * {
@@ -26,6 +26,20 @@
             border-radius: 36px;
             padding: 32px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        }
+
+        .menu-link {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .menu-link a {
+            background: #fef9f4;
+            padding: 8px 16px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #e67e22;
+            font-weight: 500;
+            display: inline-block;
         }
 
         h1 {
@@ -143,21 +157,26 @@
 </head>
 <body>
 <div class="container">
-    <h1>🥟 Идеальные пельмени</h1>
-    <div class="subhead">Пошаговая инструкция с таймерами. Почему так — объясняю. Никакой воды.</div>
+    <div class="menu-link">
+        <a href="index.html">← Назад к пельменям</a>
+    </div>
+
+    <h1>🥟 Вареники с творогом — как сварить, чтобы не развалились</h1>
+    <div class="subhead">Пошаговая инструкция с таймерами. Вареники нежнее пельменей, поэтому время и внимание важнее.</div>
 
     <!-- ШАГ 1 -->
     <div class="step-card">
         <div class="step-title">📌 Шаг 1. Кипятим воду</div>
         <div class="step-desc">
-            <strong>Почему это важно:</strong> Если воды мало, пельмени слипнутся. Если нет соли, тесто станет резиновым.
+            <strong>Почему это важно:</strong> Вареники варятся в большом объёме воды, иначе слипнутся и разварятся.
 
             • Кастрюля <strong>от 3 литров</strong>
-• Воды — <strong>2/3 кастрюли</strong> (минимум 2 литра)
+
+            • Воды — <strong>2/3 кастрюли</strong>
 
             • Соль — <strong>1 ст. ложка БЕЗ горки</strong>
 
-            • Доведи до <strong>сильного кипения</strong>
+            • Доведи до <strong>сильного кипения</strong> (крупные пузыри)
         </div>
         <div class="timer-row">
             <span class="timer-display" id="timerWater">4:00</span>
@@ -168,22 +187,22 @@
 
     <!-- ШАГ 2 -->
     <div class="step-card">
-        <div class="step-title">📌 Шаг 2. Варим до всплытия</div>
+        <div class="step-title">📌 Шаг 2. Бросаем вареники</div>
         <div class="step-desc">
-            <strong>Замороженные</strong> — не размораживай, кидай сразу.
+            <strong>Замороженные</strong> — не размораживай, иначе размякнут.
 
-            <strong>Свежие</strong> — вари на 1 минуту меньше.
+            <strong>Свежие</strong> — варятся на 1–2 минуты быстрее.
 
-            • Кидай <strong>по одному</strong>, чтобы вода не остыла.
+            • Кидай <strong>по одному</strong>, аккуратно, чтобы вода не остыла.
 
-            • Аккуратно перемешай <strong>один раз</strong>
+            • Аккуратно перемешай <strong>один раз</strong> — очень осторожно, творог нежный.
 
-            • Жди <strong>всплытия</strong> — это займёт 3–4 минуты.
+            • Жди <strong>всплытия</strong>. Это займёт 2–3 минуты.
         </div>
-        <div class="note">💡 Если пельмени не всплыли через 4 минуты — огонь слабый. Увеличь.</div>
+        <div class="note">💡 Вареники более нежные, чем пельмени. Не перемешивай активно, используй шумовку.</div>
         <div class="timer-row">
-            <span class="timer-display" id="timerFloat">3:30</span>
-            <button id="startFloatBtn">🍥 Старт (3:30 до всплытия)</button>
+            <span class="timer-display" id="timerFloat">2:30</span>
+            <button id="startFloatBtn">🍥 Старт (2:30 до всплытия)</button>
             <button id="resetFloatBtn" class="btn-reset">Сброс</button>
         </div>
     </div>
@@ -192,15 +211,17 @@
     <div class="step-card">
         <div class="step-title">📌 Шаг 3. Финишная варка</div>
         <div class="step-desc">
-            Пельмени всплыли? <strong>Запускай таймер!</strong> Крышкой не накрывай — иначе развалятся.
+            Вареники всплыли? <strong>Запускай таймер!</strong> Крышкой не накрывай.
 
-            • <strong>Замороженные:</strong> 5 минут
+            • <strong>Замороженные:</strong> 3–4 минуты
 
-            • <strong>Свежие:</strong> 4 минуты
+            • <strong>Свежие:</strong> 2–3 минуты
+
+            • Если вареников много (больше 500 г) — добавь ещё 1 минуту.
         </div>
         <div class="timer-row">
-            <span class="timer-display" id="timerBoil">5:00</span>
-            <button id="startBoilBtn">⏱️ Старт варки (5 минут)</button>
+            <span class="timer-display" id="timerBoil">4:00</span>
+            <button id="startBoilBtn">⏱️ Старт варки (4 минуты)</button>
             <button id="resetBoilBtn" class="btn-reset">Сброс</button>
         </div>
     </div>
@@ -211,23 +232,25 @@
         <div class="step-desc">
             • Выключи огонь.
 
-            • Доставай <strong>шумовкой</strong>, дай воде стечь.
+            • Доставай <strong>шумовкой</strong>, дай воде стечь (не дуршлагом — повредятся).
 
             • Добавь <strong>сливочное масло</strong> (кусочек 20–30 г) — не слипнутся.
+
+            • Подавай со сметаной, мёдом или вареньем.
         </div>
-        <div class="note">⭐ Если слиплись — перемешивал слишком много или мало масла.</div>
+        <div class="note">⭐ Если вареники всё равно слиплись — ты перемешивал слишком много раз или мало масла.</div>
     </div>
 
     <!-- СУПЕР-ТАЙМЕР -->
     <div class="global-timer">
         <div>⚡ СУПЕР-ТАЙМЕР (кипячение → всплытие → варка)</div>
-        <div class="timer" id="fullTimer">12:30</div>
+        <div class="timer" id="fullTimer">10:30</div>
         <button id="startFullBtn">🚀 Запустить полный цикл</button>
         <button id="resetFullBtn" class="btn-reset" style="background:#d9534f;">Сбросить всё</button>
     </div>
 
     <div class="footer">
-        Рецепт проверен на сотнях порций. Просто следуй таймерам.
+        Рецепт проверен на домашней кухне. Вареники любят осторожность.
     </div>
 </div>
 
@@ -240,37 +263,40 @@
     function resetWater() { if(waterInterval) clearInterval(waterInterval); waterSeconds=240; updateWater(); }
     document.getElementById('startWaterBtn').onclick=startWater;
     document.getElementById('resetWaterBtn').onclick=resetWater;
+    updateWater();
 
-    // === ТАЙМЕР 2: ВСПЛЫТИЕ (3 минуты 30 секунд) ===
-    let floatSeconds = 210, floatInterval = null;
+    // === ТАЙМЕР 2: ВСПЛЫТИЕ (2 минуты 30 секунд) ===
+    let floatSeconds = 150, floatInterval = null;
     const floatDisplay = document.getElementById('timerFloat');
     function updateFloat() { let m=Math.floor(floatSeconds/60), s=floatSeconds%60; floatDisplay.innerText=`${m}:${s.toString().padStart(2,'0')}`; }
-    function startFloat() { if(floatInterval) clearInterval(floatInterval); floatInterval=setInterval(()=>{ if(floatSeconds<=1){ clearInterval(floatInterval); floatDisplay.innerText="🥟 Пельмени всплыли!"; } else { floatSeconds--; updateFloat(); } },1000); }
-    function resetFloat() { if(floatInterval) clearInterval(floatInterval); floatSeconds=210; updateFloat(); }
+    function startFloat() { if(floatInterval) clearInterval(floatInterval); floatInterval=setInterval(()=>{ if(floatSeconds<=1){ clearInterval(floatInterval); floatDisplay.innerText="🥟 Вареники всплыли!"; } else { floatSeconds--; updateFloat(); } },1000); }
+    function resetFloat() { if(floatInterval) clearInterval(floatInterval); floatSeconds=150; updateFloat(); }
     document.getElementById('startFloatBtn').onclick=startFloat;
     document.getElementById('resetFloatBtn').onclick=resetFloat;
+    updateFloat();
 
-    // === ТАЙМЕР 3: ВАРКА (5 минут) ===
-    let boilSeconds = 300, boilInterval = null;
+    // === ТАЙМЕР 3: ВАРКА (4 минуты) ===
+    let boilSeconds = 240, boilInterval = null;
     const boilDisplay = document.getElementById('timerBoil');
     function updateBoil() { let m=Math.floor(boilSeconds/60), s=boilSeconds%60; boilDisplay.innerText=`${m}:${s.toString().padStart(2,'0')}`; }
-    function startBoil() { if(boilInterval) clearInterval(boilInterval); boilInterval=setInterval(()=>{ if(boilSeconds<=1){ clearInterval(boilInterval); boilDisplay.innerText="🎉 Пельмени готовы!"; } else { boilSeconds--; updateBoil(); } },1000); }
-    function resetBoil() { if(boilInterval) clearInterval(boilInterval); boilSeconds=300; updateBoil(); }
+    function startBoil() { if(boilInterval) clearInterval(boilInterval); boilInterval=setInterval(()=>{ if(boilSeconds<=1){ clearInterval(boilInterval); boilDisplay.innerText="🎉 Вареники готовы!"; } else { boilSeconds--; updateBoil(); } },1000); }
+    function resetBoil() { if(boilInterval) clearInterval(boilInterval); boilSeconds=240; updateBoil(); }
     document.getElementById('startBoilBtn').onclick=startBoil;
     document.getElementById('resetBoilBtn').onclick=resetBoil;
+    updateBoil();
 
     // === СУПЕР-ТАЙМЕР (ПОЛНЫЙ ЦИКЛ) ===
-    let fullSeconds = 750, fullInterval = null; // 4:00 + 3:30 + 5:00 = 12:30
+    let fullSeconds = 630, fullInterval = null;
     const fullDisplay = document.getElementById('fullTimer');
     function updateFull() { let m=Math.floor(fullSeconds/60), s=fullSeconds%60; fullDisplay.innerText=`${m}:${s.toString().padStart(2,'0')}`; }
     function startFull() {
         if(fullInterval) clearInterval(fullInterval);
-        fullSeconds = 750;
+        fullSeconds = 630;
         updateFull();
         fullInterval = setInterval(() => {
             if(fullSeconds <= 1) {
                 clearInterval(fullInterval);
-                fullDisplay.innerText = "🎉 ГОТОВО! 🎉";
+                fullDisplay.innerText = "🎉 ВАРЕНИКИ ГОТОВЫ! 🎉";
             } else {
                 fullSeconds--;
                 updateFull();
@@ -279,17 +305,11 @@
     }
     function resetFull() {
         if(fullInterval) clearInterval(fullInterval);
-        fullSeconds = 750; updateFull();
+        fullSeconds = 630; updateFull();
         resetWater(); resetFloat(); resetBoil();
     }
     document.getElementById('startFullBtn').onclick = startFull;
     document.getElementById('resetFullBtn').onclick = resetFull;
-
-    // начальное отображение
-    updateWater(); updateFloat(); updateBoil(); updateFull();
 </script>
-<div style="text-align: center; margin: 40px 0 20px;">
-    <a href="vareniki_tvorog.html" style="color: #e67e22; text-decoration: none; font-size: 18px;">🥟 Вареники с творогом</a>
-</div>
 </body>
 </html>
